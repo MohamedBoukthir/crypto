@@ -1,0 +1,40 @@
+* {
+    -fx-primary-color: #32563b;
+    -fx-grey-color: #b9b9b9;
+
+}
+
+.root {
+    -fx-font-family:  "Bebas Neue", sans-serif;
+    -fx-background-image: url("https://cdn.pixabay.com/photo/2014/05/27/23/32/matrix-356024_960_720.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+
+.buttons {
+    -fx-background-color: linear-gradient(to top right, -fx-primary-color, #020202);
+    -fx-font-weight: bold;
+    -fx-border-color: rgb(255, 255, 255);
+    -fx-border-weight: 10px;
+    -fx-border-radius: 10px;
+}
+
+.buttons:hover {
+    -fx-background-color: linear-gradient(to top right, #32563b, #020202);
+    -fx-border-color:black;
+    -fx-background-insets: 0;
+    -fx-border-weight: 10px;
+    -fx-border-radius: 10px;
+}
+
+.text{
+    -fx-accent: -fx-primary-color;
+    -fx-background-color: -fx-grey-color, rgba(255, 255, 255, 0.51);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-border-radius: 15px;
+
+}
+.text:focused {
+    -fx-background-color: -fx-primary-color, white;
+}
