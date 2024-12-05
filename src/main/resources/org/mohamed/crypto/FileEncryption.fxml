@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1042.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1042.0" stylesheets="@../../../application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Text fill="WHITE" fontSmoothingType="LCD" layoutX="22.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 42px; -fx-font-weight: bold;" text="File Encryption" textAlignment="CENTER" wrappingWidth="314.13671875" />
         <TextField layoutX="41.0" layoutY="123.0" prefHeight="172.0" prefWidth="314.0" styleClass="text" text="Enter Plain File Path">
@@ -30,7 +30,7 @@
                 <Font size="25.0" />
             </font>
         </TextField>
-        <TextField alignment="TOP_CENTER" layoutX="394.0" layoutY="379.0" prefHeight="37.0" prefWidth="257.0" styleClass="text" stylesheets="@application.css" text="Enter Key">
+        <TextField alignment="TOP_CENTER" layoutX="394.0" layoutY="379.0" prefHeight="37.0" prefWidth="257.0" styleClass="text" stylesheets="@../../../application.css" text="Enter Key">
             <font>
                 <Font size="16.0" />
             </font>
