@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("HomePage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        scene.getStylesheets().add(getClass().getResource("/application.css").toExternalForm());
+        scene.getStylesheets().add(this.getClass().getResource("/application.css").toExternalForm());
 
         stage.setTitle("Crypto");
         stage.setScene(scene);

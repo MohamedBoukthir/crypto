@@ -1,18 +1,31 @@
 package org.mohamed.crypto.Controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
+import java.io.IOException;
 import java.util.Base64;
 
 public class TextEncryptionLogic {
     private static final String ALGORITHM = "Blowfish";
 
     @FXML
-    private TextField plainInputText, keyInput, result, cypherTextInput, decryptionKeyInput, decryptionResult;
+    private TextField  keyInput, decryptionKeyInput;
+    @FXML
+    private TextArea plainInputText,cypherTextInput, decryptionResult, result;
+    @FXML
+    private Button EncryptionBtn, DecryptionBtn, HomeBtn;
 
     // Method to encrypt text
     public String encryptText(String text, String key) throws Exception {
@@ -31,6 +44,14 @@ public class TextEncryptionLogic {
         byte[] decodedBytes = Base64.getDecoder().decode(encryptedText);
         byte[] decryptedBytes = cipher.doFinal(decodedBytes);
         return new String(decryptedBytes);
+    }
+
+    public void goBackToHome(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/org/mohamed/crypto/HomePage.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
